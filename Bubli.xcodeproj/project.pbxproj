@@ -13,7 +13,7 @@
 		E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAA1A431CCC00486B2A /* Main.storyboard */; };
 		E85DAEAE1A431CCC00486B2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAD1A431CCC00486B2A /* Images.xcassets */; };
 		E85DAEB11A431CCC00486B2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAF1A431CCC00486B2A /* LaunchScreen.xib */; };
-		E8823CF71ACC505F00511161 /* FMOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = E8823CF61ACC505F00511161 /* FMOscillator.m */; };
+		E8EDAAEC1ACD812A0094F875 /* FMOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +39,11 @@
 		E85DAEB01A431CCC00486B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E85DAEB61A431CCC00486B2A /* BubliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85DAEBB1A431CCC00486B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8823CF51ACC505F00511161 /* FMOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMOscillator.h; sourceTree = "<group>"; };
-		E8823CF61ACC505F00511161 /* FMOscillator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMOscillator.m; sourceTree = "<group>"; };
 		E8823CF81ACC511300511161 /* Bubli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bubli-Bridging-Header.h"; path = "Bubli/Bubli-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8823CF91ACC54DB00511161 /* libPods-AudioKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AudioKit.a"; path = "Pods/../build/Debug-iphoneos/libPods-AudioKit.a"; sourceTree = "<group>"; };
 		E8823CFB1ACC575500511161 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E8823CFD1ACC575E00511161 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMOscillator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +100,8 @@
 		E85DAEA31A431CCC00486B2A /* Bubli */ = {
 			isa = PBXGroup;
 			children = (
-				E8823CFF1ACC593700511161 /* ObjC */,
 				E85DAEA61A431CCC00486B2A /* AppDelegate.swift */,
+				E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */,
 				E85DAEA81A431CCC00486B2A /* ViewController.swift */,
 				E85DAEAA1A431CCC00486B2A /* Main.storyboard */,
 				E85DAEAD1A431CCC00486B2A /* Images.xcassets */,
@@ -134,15 +133,6 @@
 				E85DAEBB1A431CCC00486B2A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E8823CFF1ACC593700511161 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-				E8823CF51ACC505F00511161 /* FMOscillator.h */,
-				E8823CF61ACC505F00511161 /* FMOscillator.m */,
-			);
-			name = ObjC;
 			sourceTree = "<group>";
 		};
 		F2ED032365A3EC4CEC644E0E /* Pods */ = {
@@ -290,8 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8823CF71ACC505F00511161 /* FMOscillator.m in Sources */,
 				E85DAEA91A431CCC00486B2A /* ViewController.swift in Sources */,
+				E8EDAAEC1ACD812A0094F875 /* FMOscillator.swift in Sources */,
 				E85DAEA71A431CCC00486B2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

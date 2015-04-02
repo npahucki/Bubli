@@ -6,11 +6,10 @@
 //  Copyright (c) 2015 Nathan Pahucki. All rights reserved.
 //
 
-#ifndef Bubli_Bubli_Bridging_Header_h
-#define Bubli_Bubli_Bridging_Header_h
+#ifndef Bubli_Bridging_Header_h
+#define Bubli_Bridging_Header_h
 
-
-#import "FMOscillator.h"
+#import <AudioKit/AKFoundation.h>
 
 
 #endif
