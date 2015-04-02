@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC3B85A791308D31020048F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D40A92D8F55A39317F08343A /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		E85DAEA71A431CCC00486B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85DAEA61A431CCC00486B2A /* AppDelegate.swift */; };
+		E85DAEA91A431CCC00486B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85DAEA81A431CCC00486B2A /* ViewController.swift */; };
+		E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAA1A431CCC00486B2A /* Main.storyboard */; };
+		E85DAEAE1A431CCC00486B2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAD1A431CCC00486B2A /* Images.xcassets */; };
+		E85DAEB11A431CCC00486B2A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAF1A431CCC00486B2A /* LaunchScreen.xib */; };
+		E8823CF71ACC505F00511161 /* FMOscillator.m in Sources */ = {isa = PBXBuildFile; fileRef = E8823CF61ACC505F00511161 /* FMOscillator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E85DAEB71A431CCC00486B2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E85DAE991A431CCC00486B2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E85DAEA01A431CCC00486B2A;
+			remoteInfo = Bubli;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D40A92D8F55A39317F08343A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85DAEA11A431CCC00486B2A /* Bubli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85DAEA51A431CCC00486B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85DAEA61A431CCC00486B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E85DAEA81A431CCC00486B2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E85DAEAB1A431CCC00486B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E85DAEAD1A431CCC00486B2A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E85DAEB01A431CCC00486B2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E85DAEB61A431CCC00486B2A /* BubliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E85DAEBB1A431CCC00486B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8823CF51ACC505F00511161 /* FMOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMOscillator.h; sourceTree = "<group>"; };
+		E8823CF61ACC505F00511161 /* FMOscillator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMOscillator.m; sourceTree = "<group>"; };
+		E8823CF81ACC511300511161 /* Bubli-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bubli-Bridging-Header.h"; path = "Bubli/Bubli-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8823CF91ACC54DB00511161 /* libPods-AudioKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AudioKit.a"; path = "Pods/../build/Debug-iphoneos/libPods-AudioKit.a"; sourceTree = "<group>"; };
+		E8823CFB1ACC575500511161 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E8823CFD1ACC575E00511161 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E85DAE9E1A431CCC00486B2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC3B85A791308D31020048F1 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85DAEB31A431CCC00486B2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B84545FAC33F8358EAAA96CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8823CFD1ACC575E00511161 /* AVFoundation.framework */,
+				E8823CFB1ACC575500511161 /* AudioToolbox.framework */,
+				E8823CF91ACC54DB00511161 /* libPods-AudioKit.a */,
+				D40A92D8F55A39317F08343A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E85DAE981A431CCC00486B2A = {
+			isa = PBXGroup;
+			children = (
+				E8823CF81ACC511300511161 /* Bubli-Bridging-Header.h */,
+				E85DAEA31A431CCC00486B2A /* Bubli */,
+				E85DAEB91A431CCC00486B2A /* BubliTests */,
+				E85DAEA21A431CCC00486B2A /* Products */,
+				F2ED032365A3EC4CEC644E0E /* Pods */,
+				B84545FAC33F8358EAAA96CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E85DAEA21A431CCC00486B2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E85DAEA11A431CCC00486B2A /* Bubli.app */,
+				E85DAEB61A431CCC00486B2A /* BubliTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E85DAEA31A431CCC00486B2A /* Bubli */ = {
+			isa = PBXGroup;
+			children = (
+				E8823CFF1ACC593700511161 /* ObjC */,
+				E85DAEA61A431CCC00486B2A /* AppDelegate.swift */,
+				E85DAEA81A431CCC00486B2A /* ViewController.swift */,
+				E85DAEAA1A431CCC00486B2A /* Main.storyboard */,
+				E85DAEAD1A431CCC00486B2A /* Images.xcassets */,
+				E85DAEAF1A431CCC00486B2A /* LaunchScreen.xib */,
+				E85DAEA41A431CCC00486B2A /* Supporting Files */,
+			);
+			path = Bubli;
+			sourceTree = "<group>";
+		};
+		E85DAEA41A431CCC00486B2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E85DAEA51A431CCC00486B2A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E85DAEB91A431CCC00486B2A /* BubliTests */ = {
+			isa = PBXGroup;
+			children = (
+				E85DAEBA1A431CCC00486B2A /* Supporting Files */,
+			);
+			path = BubliTests;
+			sourceTree = "<group>";
+		};
+		E85DAEBA1A431CCC00486B2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E85DAEBB1A431CCC00486B2A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8823CFF1ACC593700511161 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				E8823CF51ACC505F00511161 /* FMOscillator.h */,
+				E8823CF61ACC505F00511161 /* FMOscillator.m */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
+		F2ED032365A3EC4CEC644E0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */,
+				ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E85DAEA01A431CCC00486B2A /* Bubli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E85DAEC01A431CCC00486B2A /* Build configuration list for PBXNativeTarget "Bubli" */;
+			buildPhases = (
+				51918F100B50ECD081608FBE /* Check Pods Manifest.lock */,
+				E85DAE9D1A431CCC00486B2A /* Sources */,
+				E85DAE9E1A431CCC00486B2A /* Frameworks */,
+				E85DAE9F1A431CCC00486B2A /* Resources */,
+				DC1CBD0862EC465797F0780B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bubli;
+			productName = Bubli;
+			productReference = E85DAEA11A431CCC00486B2A /* Bubli.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E85DAEB51A431CCC00486B2A /* BubliTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E85DAEC31A431CCC00486B2A /* Build configuration list for PBXNativeTarget "BubliTests" */;
+			buildPhases = (
+				E85DAEB21A431CCC00486B2A /* Sources */,
+				E85DAEB31A431CCC00486B2A /* Frameworks */,
+				E85DAEB41A431CCC00486B2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E85DAEB81A431CCC00486B2A /* PBXTargetDependency */,
+			);
+			name = BubliTests;
+			productName = BubliTests;
+			productReference = E85DAEB61A431CCC00486B2A /* BubliTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E85DAE991A431CCC00486B2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Nathan Pahucki";
+				TargetAttributes = {
+					E85DAEA01A431CCC00486B2A = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 7F4YJQGJ9E;
+					};
+					E85DAEB51A431CCC00486B2A = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E85DAEA01A431CCC00486B2A;
+					};
+				};
+			};
+			buildConfigurationList = E85DAE9C1A431CCC00486B2A /* Build configuration list for PBXProject "Bubli" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E85DAE981A431CCC00486B2A;
+			productRefGroup = E85DAEA21A431CCC00486B2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E85DAEA01A431CCC00486B2A /* Bubli */,
+				E85DAEB51A431CCC00486B2A /* BubliTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E85DAE9F1A431CCC00486B2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */,
+				E85DAEB11A431CCC00486B2A /* LaunchScreen.xib in Resources */,
+				E85DAEAE1A431CCC00486B2A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85DAEB41A431CCC00486B2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51918F100B50ECD081608FBE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1CBD0862EC465797F0780B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E85DAE9D1A431CCC00486B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8823CF71ACC505F00511161 /* FMOscillator.m in Sources */,
+				E85DAEA91A431CCC00486B2A /* ViewController.swift in Sources */,
+				E85DAEA71A431CCC00486B2A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E85DAEB21A431CCC00486B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E85DAEB81A431CCC00486B2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E85DAEA01A431CCC00486B2A /* Bubli */;
+			targetProxy = E85DAEB71A431CCC00486B2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E85DAEAA1A431CCC00486B2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85DAEAB1A431CCC00486B2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E85DAEAF1A431CCC00486B2A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E85DAEB01A431CCC00486B2A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E85DAEBE1A431CCC00486B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bubli/Bubli-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E85DAEBF1A431CCC00486B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bubli/Bubli-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E85DAEC11A431CCC00486B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Bubli/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = Bubli;
+			};
+			name = Debug;
+		};
+		E85DAEC21A431CCC00486B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Bubli/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = Bubli;
+			};
+			name = Release;
+		};
+		E85DAEC41A431CCC00486B2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BubliTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BubliTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubli.app/Bubli";
+			};
+			name = Debug;
+		};
+		E85DAEC51A431CCC00486B2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BubliTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BubliTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bubli.app/Bubli";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E85DAE9C1A431CCC00486B2A /* Build configuration list for PBXProject "Bubli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85DAEBE1A431CCC00486B2A /* Debug */,
+				E85DAEBF1A431CCC00486B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E85DAEC01A431CCC00486B2A /* Build configuration list for PBXNativeTarget "Bubli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85DAEC11A431CCC00486B2A /* Debug */,
+				E85DAEC21A431CCC00486B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E85DAEC31A431CCC00486B2A /* Build configuration list for PBXNativeTarget "BubliTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E85DAEC41A431CCC00486B2A /* Debug */,
+				E85DAEC51A431CCC00486B2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E85DAE991A431CCC00486B2A /* Project object */;
+}
