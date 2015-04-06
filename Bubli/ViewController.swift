@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var instructionsLabel: UILabel!
+    
     var touchOne : UITouch?
     var touchTwo : UITouch?
     var touchThree : UITouch?
@@ -34,8 +36,11 @@ class ViewController: UIViewController {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0 / 30.0, target: self, selector: "updateBackgroundColor", userInfo: nil, repeats: true)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "prepareForForeground", name:UIApplicationDidBecomeActiveNotification , object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "prepareForBackground", name:UIApplicationWillResignActiveNotification , object: nil)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        fm1.start()
     }
     
     private func reset() {
@@ -52,12 +57,8 @@ class ViewController: UIViewController {
     @objc func prepareForBackground() {
         fm1.reset()
         fm1.stop()
+        self.navigationController?.popToRootViewControllerAnimated(false)
     }
-
-    @objc func prepareForForeground() {
-        fm1.start()
-    }
-
     
     @objc
     func updateBackgroundColor() {
@@ -99,6 +100,8 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        instructionsLabel.hidden = true
+        
         super.touchesBegan(touches, withEvent: event)
         
         for t in touches {

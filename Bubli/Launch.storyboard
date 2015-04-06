@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro Transition-->
+        <scene sceneID="dtR-r1-mXa">
+            <objects>
+                <viewController id="FjR-9i-otR" userLabel="Intro Transition" customClass="IntroViewController" customModule="Bubli" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c8l-X6-DsC"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Ze-fR-9tJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bce-9K-nbM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmh-vx-Srj" userLabel="Container View">
+                                <rect key="frame" x="66" y="66" width="468" height="468"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="AppSlash" translatesAutoresizingMaskIntoConstraints="NO" id="NBp-zA-oX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="468" height="468"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NBp-zA-oX5" firstAttribute="leading" secondItem="Nmh-vx-Srj" secondAttribute="leading" id="0Ev-Un-b3f"/>
+                                    <constraint firstAttribute="bottom" secondItem="NBp-zA-oX5" secondAttribute="bottom" id="RR2-rC-B1I"/>
+                                    <constraint firstAttribute="width" secondItem="Nmh-vx-Srj" secondAttribute="height" multiplier="1:1" id="SvE-BE-nVd"/>
+                                    <constraint firstItem="NBp-zA-oX5" firstAttribute="top" secondItem="Nmh-vx-Srj" secondAttribute="top" id="XMm-9z-TS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="NBp-zA-oX5" secondAttribute="trailing" id="teV-5z-Auk"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Infant IQ. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xUZ-NK-3Ym">
+                                <rect key="frame" x="66" y="542" width="468" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.50588235290000005" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bubli" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-2Z-59a">
+                                <rect key="frame" x="228" y="8" width="144" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hGx-vz-uZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" red="0.5450980392" green="0.82352941180000006" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Nmh-vx-Srj" secondAttribute="trailing" constant="8" id="40b-04-wtT"/>
+                            <constraint firstAttribute="centerX" secondItem="Nmh-vx-Srj" secondAttribute="centerX" id="4tJ-tE-84r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nmh-vx-Srj" secondAttribute="trailing" priority="500" constant="8" id="7n8-rb-fSm"/>
+                            <constraint firstItem="6Ze-fR-9tJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xUZ-NK-3Ym" secondAttribute="bottom" constant="8" id="G2z-De-RS1"/>
+                            <constraint firstItem="xUZ-NK-3Ym" firstAttribute="top" secondItem="Nmh-vx-Srj" secondAttribute="bottom" constant="8" id="MD2-ae-qu5"/>
+                            <constraint firstItem="Nmh-vx-Srj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bce-9K-nbM" secondAttribute="leadingMargin" constant="8" id="QAs-D0-7q5"/>
+                            <constraint firstItem="O7I-2Z-59a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bce-9K-nbM" secondAttribute="top" constant="8" id="QeV-n6-pOk"/>
+                            <constraint firstItem="Nmh-vx-Srj" firstAttribute="centerX" secondItem="O7I-2Z-59a" secondAttribute="centerX" id="WC4-ps-cvs"/>
+                            <constraint firstItem="xUZ-NK-3Ym" firstAttribute="centerX" secondItem="Nmh-vx-Srj" secondAttribute="centerX" id="auE-hR-poK"/>
+                            <constraint firstItem="xUZ-NK-3Ym" firstAttribute="width" secondItem="Nmh-vx-Srj" secondAttribute="width" id="b5j-ky-WJf"/>
+                            <constraint firstAttribute="centerY" secondItem="Nmh-vx-Srj" secondAttribute="centerY" id="hFT-TX-0cX"/>
+                            <constraint firstItem="Nmh-vx-Srj" firstAttribute="top" secondItem="O7I-2Z-59a" secondAttribute="bottom" constant="8" id="jnY-XK-4VT"/>
+                            <constraint firstAttribute="centerX" secondItem="xUZ-NK-3Ym" secondAttribute="centerX" id="kYo-oL-C1i"/>
+                            <constraint firstItem="Nmh-vx-Srj" firstAttribute="leading" secondItem="bce-9K-nbM" secondAttribute="leadingMargin" priority="500" constant="8" id="w9A-ZG-ZE0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PgQ-vR-v7U"/>
+                    <connections>
+                        <outlet property="backImage" destination="NBp-zA-oX5" id="hEI-hS-T0R"/>
+                        <outlet property="copyrightLabel" destination="xUZ-NK-3Ym" id="qmf-Ld-h1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyB-ms-hGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppSlash" width="512" height="512"/>
+    </resources>
+</document>

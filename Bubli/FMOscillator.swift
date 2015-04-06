@@ -24,18 +24,13 @@ class FMOscillator : AKInstrument {
         addProperty(modulationIndex)
         addProperty(amplitude)
 
-        // INSTRUMENT DEFINITION ===============================================
         let osc = AKFMOscillator(waveform: AKTable.standardSquareWave(),
             baseFrequency: frequency,
             carrierMultiplier: carrierMultiplier,
             modulatingMultiplier: modulatingMultiplier,
             modulationIndex: modulationIndex,
             amplitude: amplitude)
-        self.connect(osc)
-        
-        // AUDIO OUTPUT ========================================================
-        let audio = AKAudioOutput(audioSource: osc)
-        self.connect(audio)
+        setAudioOutput(osc)
     }
     
     func reset() {
