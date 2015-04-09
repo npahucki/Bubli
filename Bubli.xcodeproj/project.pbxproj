@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC3B85A791308D31020048F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D40A92D8F55A39317F08343A /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		189541441374C23CD9564DE6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C45FD0330DC4942FBDAA78D /* libPods.a */; };
 		E85DAEA71A431CCC00486B2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85DAEA61A431CCC00486B2A /* AppDelegate.swift */; };
 		E85DAEA91A431CCC00486B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85DAEA81A431CCC00486B2A /* ViewController.swift */; };
 		E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAA1A431CCC00486B2A /* Main.storyboard */; };
@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C45FD0330DC4942FBDAA78D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D40A92D8F55A39317F08343A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85DAEA11A431CCC00486B2A /* Bubli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bubli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85DAEA51A431CCC00486B2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85DAEA61A431CCC00486B2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3B85A791308D31020048F1 /* libPods.a in Frameworks */,
+				189541441374C23CD9564DE6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +73,7 @@
 				E8823CFD1ACC575E00511161 /* AVFoundation.framework */,
 				E8823CFB1ACC575500511161 /* AudioToolbox.framework */,
 				E8823CF91ACC54DB00511161 /* libPods-AudioKit.a */,
-				D40A92D8F55A39317F08343A /* libPods.a */,
+				3C45FD0330DC4942FBDAA78D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -435,7 +435,7 @@
 		};
 		E85DAEC41A431CCC00486B2A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 411D95DCB34AD440DCD7F5DD /* Pods.debug.xcconfig */;
+			baseConfigurationReference = ABE2844219AC45ABB802F665 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

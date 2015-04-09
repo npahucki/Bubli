@@ -14,18 +14,20 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var copyrightLabel: UILabel!
-    
+    @IBOutlet weak var moreAppsView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         explainerLabel.alpha = 0.0
         startButton.alpha = 0.0
+        moreAppsView.alpha = 0.0
         
         
         UIView.animateWithDuration(1.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.backImage.alpha = 0.05
             self.copyrightLabel.alpha = 0.0
             self.explainerLabel.alpha = 1.0
+            self.moreAppsView.alpha = 1.0
             self.startButton.alpha = 1.0
         }) { (Bool complete) -> Void in
             //
