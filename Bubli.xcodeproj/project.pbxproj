@@ -12,9 +12,9 @@
 		E85DAEA91A431CCC00486B2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85DAEA81A431CCC00486B2A /* ViewController.swift */; };
 		E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAA1A431CCC00486B2A /* Main.storyboard */; };
 		E85DAEAE1A431CCC00486B2A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85DAEAD1A431CCC00486B2A /* Images.xcassets */; };
+		E8C125801AD81D6000942CE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8C1257F1AD81D6000942CE2 /* LaunchScreen.xib */; };
 		E8EDAAEC1ACD812A0094F875 /* FMOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */; };
 		E8EDAAEE1ACDFCC70094F875 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EDAAED1ACDFCC70094F875 /* IntroViewController.swift */; };
-		E8EDAAF01AD2EC0D0094F875 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EDAAEF1AD2EC0D0094F875 /* Launch.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +43,9 @@
 		E8823CF91ACC54DB00511161 /* libPods-AudioKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AudioKit.a"; path = "Pods/../build/Debug-iphoneos/libPods-AudioKit.a"; sourceTree = "<group>"; };
 		E8823CFB1ACC575500511161 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E8823CFD1ACC575E00511161 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8C1257F1AD81D6000942CE2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMOscillator.swift; sourceTree = "<group>"; };
 		E8EDAAED1ACDFCC70094F875 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
-		E8EDAAEF1AD2EC0D0094F875 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				E8EDAAEB1ACD812A0094F875 /* FMOscillator.swift */,
 				E85DAEA81A431CCC00486B2A /* ViewController.swift */,
 				E85DAEAA1A431CCC00486B2A /* Main.storyboard */,
-				E8EDAAEF1AD2EC0D0094F875 /* Launch.storyboard */,
+				E8C1257F1AD81D6000942CE2 /* LaunchScreen.xib */,
 				E8EDAAED1ACDFCC70094F875 /* IntroViewController.swift */,
 				E85DAEAD1A431CCC00486B2A /* Images.xcassets */,
 				E85DAEA41A431CCC00486B2A /* Supporting Files */,
@@ -230,9 +230,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C125801AD81D6000942CE2 /* LaunchScreen.xib in Resources */,
 				E85DAEAC1A431CCC00486B2A /* Main.storyboard in Resources */,
 				E85DAEAE1A431CCC00486B2A /* Images.xcassets in Resources */,
-				E8EDAAF01AD2EC0D0094F875 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
