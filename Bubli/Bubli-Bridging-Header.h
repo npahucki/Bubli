@@ -10,6 +10,9 @@
 #define Bubli_Bridging_Header_h
 
 #import <AudioKit/AKFoundation.h>
+#import <Heap/Heap.h>
+#import <InfantIQAppsKit/IQApplication.h>
+#import <InfantIQAppsKit/IQApplicationListController.h>
 
 
 #endif

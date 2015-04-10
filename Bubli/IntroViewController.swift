@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController {
+class IntroViewController: UIViewController, IQApplicationListDelegate {
 
     @IBOutlet weak var explainerLabel: UILabel!
     @IBOutlet weak var backImage: UIImageView!
@@ -29,9 +29,13 @@ class IntroViewController: UIViewController {
         startButton.alpha = 0.0
         moreAppsView.alpha = 0.0
         
-        // 300, max needed to show 3 additional items.
-        // 172 a little less than two items. 
-        // 480 is the 4s screen size.
+        for controller in self.childViewControllers {
+            if let listController = controller as? IQApplicationListController {
+                listController.delegate = self
+                break
+            }
+        }
+
         containerMinHeightConstraint.constant =  min(containerMaxHeightConstraint.constant, 300 + (UIScreen.mainScreen().bounds.size.height - 480)/2)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "initiateViewChangeAnimation", userInfo: nil, repeats: false)
     }
@@ -69,6 +73,11 @@ class IntroViewController: UIViewController {
                 
             }
         }
+    }
+    
+    func shouldOpenApp(app: IQApplication!) -> Bool {
+        Heap.track("clickedOtherApp", withProperties: ["bundleId" : app.appBundleId])
+        return true
     }
     
     

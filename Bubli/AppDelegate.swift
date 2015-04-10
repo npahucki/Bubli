@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+    Heap.setAppId("3631878694")
+#if DEBUG
+    Heap.enableVisualizer()
+#endif
         return true
     }
 
