@@ -32,10 +32,8 @@ class IntroViewController: UIViewController {
         // 300, max needed to show 3 additional items.
         // 172 a little less than two items. 
         // 480 is the 4s screen size.
-        containerMinHeightConstraint.constant =  300 + (UIScreen.mainScreen().bounds.size.height - 480)/2
-        
+        containerMinHeightConstraint.constant =  min(containerMaxHeightConstraint.constant, 300 + (UIScreen.mainScreen().bounds.size.height - 480)/2)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "initiateViewChangeAnimation", userInfo: nil, repeats: false)
-        
     }
     
     override func prefersStatusBarHidden() -> Bool {
