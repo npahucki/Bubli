@@ -18,7 +18,8 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var titleToImageContainerConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerMinHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var containerMaxHeightConstraint: NSLayoutConstraint!
     
     var didInitialAnimation : Bool = false
     
@@ -28,10 +29,10 @@ class IntroViewController: UIViewController {
         startButton.alpha = 0.0
         moreAppsView.alpha = 0.0
         
-        // 300, max needed to show 3 additional items. 
+        // 300, max needed to show 3 additional items.
         // 172 a little less than two items. 
         // 480 is the 4s screen size.
-//        containerHeightConstraint.constant =  min(300, 206 + (UIScreen.mainScreen().bounds.size.height - 480))
+        containerMinHeightConstraint.constant =  300 + (UIScreen.mainScreen().bounds.size.height - 480)/2
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "initiateViewChangeAnimation", userInfo: nil, repeats: false)
         
@@ -59,18 +60,6 @@ class IntroViewController: UIViewController {
                 self.didInitialAnimation = true
         }
     }
-    
-//    override func viewWillTransitionToSize(size: CGSize,
-//        withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-//            super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-//            titleToImageContainerConstraint.active = size.height >= 768
-//            // 300, max needed to show 3 additional items.
-//            // 172 a little less than two items.
-//            // 480 is the 4s screen size.
-////            containerHeightConstraint.constant =  min(300, 206 + size.height - 480)
-//            self.view.setNeedsLayout()
-//    }
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

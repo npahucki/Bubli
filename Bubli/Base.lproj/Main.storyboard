@@ -109,6 +109,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Ksr-v9-UKP"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="M21-BZ-E9D"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="ZvH-is-Szb" kind="embed" id="2dq-RJ-KFV"/>
@@ -188,7 +189,8 @@
                     <navigationItem key="navigationItem" id="FVE-uh-P93"/>
                     <connections>
                         <outlet property="backImage" destination="hdR-In-TgG" id="Ews-SQ-2g1"/>
-                        <outlet property="containerHeightConstraint" destination="Ksr-v9-UKP" id="O1G-Mm-lTh"/>
+                        <outlet property="containerMaxHeightConstraint" destination="M21-BZ-E9D" id="vkF-2C-4Vk"/>
+                        <outlet property="containerMinHeightConstraint" destination="Ksr-v9-UKP" id="Xof-ed-uFr"/>
                         <outlet property="copyrightLabel" destination="hXd-pS-xUF" id="iQ5-re-ePD"/>
                         <outlet property="explainerLabel" destination="pWJ-Lb-nYT" id="q4f-QZ-bGs"/>
                         <outlet property="moreAppsView" destination="LuL-RC-gf1" id="qTj-OT-5ZS"/>
@@ -209,7 +211,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="infantIQAppCell" textLabel="FLf-gb-A8P" detailTextLabel="2LU-vD-ecd" imageView="sdt-Zt-eP2" style="IBUITableViewCellStyleSubtitle" id="i3D-YH-duU" customClass="IQApplicationTableCellView">
@@ -235,7 +237,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="com.infantiq.Bubli.png" id="sdt-Zt-eP2">
