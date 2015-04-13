@@ -120,16 +120,18 @@ class ViewController: UIViewController {
         super.touchesBegan(touches, withEvent: event)
         for touch in touches as! Set<UITouch> {
 
-            let touchImgView = touchImgArray.removeLast()
-            touchImgView.center = touch.locationInView(view)
-            view.addSubview(touchImgView)
-            touchImgView.alpha = 0.0
-            touchImgView.transform = CGAffineTransformMakeScale(1.5, 1.5)
-            touchImgViewsDict[touch.hash] = touchImgView
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                touchImgView.alpha = 1.0
-                touchImgView.transform = CGAffineTransformMakeScale(1, 1)
-            })
+            if(!touchImgArray.isEmpty) {
+                let touchImgView = touchImgArray.removeLast()
+                touchImgView.center = touch.locationInView(view)
+                view.addSubview(touchImgView)
+                touchImgView.alpha = 0.0
+                touchImgView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+                touchImgViewsDict[touch.hash] = touchImgView
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    touchImgView.alpha = 1.0
+                    touchImgView.transform = CGAffineTransformMakeScale(1, 1)
+                })
+            }
 
             if touchOne == nil {
                 touchOne = touch
