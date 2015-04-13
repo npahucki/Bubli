@@ -12,23 +12,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var instructionsLabel: UILabel!
     
-    var touchOne : UITouch?
-    var touchTwo : UITouch?
-    var touchThree : UITouch?
+    private lazy var touchImgViewsDict = [Int:UIImageView]()
+    private lazy var touchImgArray = [UIImageView]()
     
-    var redVal : CGFloat = 0.0
-    var redPulse : CGFloat = 0.0
-    var blueVal : CGFloat = 0.0
-    var bluePulse : CGFloat = 0.0
-    var greenVal : CGFloat = 0.0
-    var greenPulse :CGFloat = 0.0
+    private var touchOne : UITouch?
+    private var touchTwo : UITouch?
+    private var touchThree : UITouch?
     
-    var timer : NSTimer!
+    private var redVal : CGFloat = 0.0
+    private var redPulse : CGFloat = 0.0
+    private var blueVal : CGFloat = 0.0
+    private var bluePulse : CGFloat = 0.0
+    private var greenVal : CGFloat = 0.0
+    private var greenPulse :CGFloat = 0.0
     
-    var fm1 = FMOscillator()
+    private var timer : NSTimer!
+    
+    private var fm1 = FMOscillator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0...9 { // 10 touches
+            touchImgArray.append(UIImageView(image: UIImage(named: "touchSmiley")))
+        }
+        
         view.multipleTouchEnabled = true
         AKOrchestra.addInstrument(fm1)
         AKOrchestra.start()
@@ -98,12 +106,31 @@ class ViewController: UIViewController {
         return percent
     }
 
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        super.touchesMoved(touches, withEvent: event)
+        for touch in touches as! Set<UITouch> {
+            if let touchImgView = touchImgViewsDict[touch.hash] {
+                    touchImgView.center = touch.locationInView(view)
+            }
+        }
+    }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         instructionsLabel.hidden = true
-        
         super.touchesBegan(touches, withEvent: event)
-        
         for touch in touches as! Set<UITouch> {
+
+            let touchImgView = touchImgArray.removeLast()
+            touchImgView.center = touch.locationInView(view)
+            view.addSubview(touchImgView)
+            touchImgView.alpha = 0.0
+            touchImgView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+            touchImgViewsDict[touch.hash] = touchImgView
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                touchImgView.alpha = 1.0
+                touchImgView.transform = CGAffineTransformMakeScale(1, 1)
+            })
+
             if touchOne == nil {
                 touchOne = touch
             } else if (touchTwo == nil) {
@@ -113,25 +140,33 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
+
     override func touchesCancelled(touches: Set<NSObject>, withEvent event: UIEvent!) {
         super.touchesCancelled(touches,withEvent: event)
-        for touch in touches as! Set<UITouch> {
-            if touch == touchOne {
-                touchOne = nil
-            }
-            if touch == touchTwo {
-                touchTwo = nil
-            }
-            if touch == touchThree {
-                touchThree = nil
-            }
-        }
+        handleTouchedEndedOrCanceled(touches, withEvent: event)
     }
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
+        handleTouchedEndedOrCanceled(touches, withEvent: event)
+    }
+
+    func handleTouchedEndedOrCanceled(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in touches as! Set<UITouch> {
+            
+            if let touchImgView = touchImgViewsDict[touch.hash] {
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    touchImgView.alpha = 0.0
+                    touchImgView.transform = CGAffineTransformMakeScale(1.5, 1.5)
+                    }, completion: { (complete : Bool) -> Void in
+                    touchImgView.removeFromSuperview()
+                    touchImgView.alpha = 1.0
+                    self.touchImgArray.append(touchImgView)
+                    self.touchImgViewsDict.removeValueForKey(touch.hash)
+                })
+            }
+            
             if touch == touchOne {
                 touchOne = nil
             }
