@@ -98,15 +98,12 @@ class ViewController: UIViewController {
         return percent
     }
 
-    
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         instructionsLabel.hidden = true
         
         super.touchesBegan(touches, withEvent: event)
         
-        for t in touches {
-            let touch = t as UITouch
-            
+        for touch in touches as! Set<UITouch> {
             if touchOne == nil {
                 touchOne = touch
             } else if (touchTwo == nil) {
@@ -117,14 +114,24 @@ class ViewController: UIViewController {
         }
     }
     
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<NSObject>, withEvent event: UIEvent!) {
         super.touchesCancelled(touches,withEvent: event)
+        for touch in touches as! Set<UITouch> {
+            if touch == touchOne {
+                touchOne = nil
+            }
+            if touch == touchTwo {
+                touchTwo = nil
+            }
+            if touch == touchThree {
+                touchThree = nil
+            }
+        }
     }
     
-    override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
-        for t in touches {
-            let touch = t as UITouch
+        for touch in touches as! Set<UITouch> {
             if touch == touchOne {
                 touchOne = nil
             }
