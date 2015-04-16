@@ -14,7 +14,7 @@ class FMOscillator : AKInstrument {
     let frequency : AKInstrumentProperty = AKInstrumentProperty(value:330.0, minimum:220.0 , maximum:440.0)
     let carrierMultiplier : AKInstrumentProperty = AKInstrumentProperty(value:1.0, minimum:0.0, maximum:1.0)
     let modulatingMultiplier : AKInstrumentProperty = AKInstrumentProperty(value:0.005, minimum:0.0, maximum:0.5)
-    let modulationIndex : AKInstrumentProperty = AKInstrumentProperty(value:1,  minimum:15,   maximum:30)
+    let modulationIndex : AKInstrumentProperty = AKInstrumentProperty(value:1.0,  minimum:0,   maximum:2)
     let amplitude : AKInstrumentProperty = AKInstrumentProperty(value:0.0, minimum:0,   maximum:0.2)
     
     override init() {

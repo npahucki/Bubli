@@ -70,20 +70,28 @@ class ViewController: UIViewController {
     
     @objc
     func updateBackgroundColor() {
-
+        var hadTouch = false
         if let redTouch = touchOne {
             redPulse = setPropertyByXTouch(fm1.frequency, touch: redTouch)
             redVal = setPropertyByYTouch(fm1.amplitude, touch: redTouch)
+            hadTouch = true
         }
         if let greenTouch = touchTwo {
             greenPulse = setPropertyByXTouch(fm1.carrierMultiplier, touch: greenTouch)
             greenVal  = setPropertyByYTouch(fm1.modulatingMultiplier, touch: greenTouch)
+            hadTouch = true
         }
         if let blueTouch = touchThree {
             bluePulse = setPropertyByXTouch(fm1.modulationIndex, touch: blueTouch)
             blueVal = blueTouch.locationInView(view).y / view.bounds.height
+            hadTouch = true
         }
 
+        
+        if !hadTouch {
+            fm1.amplitude.value = fm1.amplitude.minimum   
+        }
+        
         let maxPulse = CGFloat(5.0)
         let maxFade = CGFloat(0.15)
         let red = redVal - (redVal * maxFade * CGFloat(abs(cos(CGFloat(CACurrentMediaTime()) * redPulse * maxPulse))))
