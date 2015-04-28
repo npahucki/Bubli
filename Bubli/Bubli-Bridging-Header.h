@@ -13,6 +13,7 @@
 #import <Heap/Heap.h>
 #import <InfantIQAppsKit/IQApplication.h>
 #import <InfantIQAppsKit/IQApplicationListController.h>
-
+#import "HTKParentalGateConstants.h"
+#import "HTKParentalGateViewController.h"
 
 #endif

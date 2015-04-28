@@ -21,7 +21,10 @@ class IntroViewController: UIViewController, IQApplicationListDelegate {
     @IBOutlet weak var containerMinHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerMaxHeightConstraint: NSLayoutConstraint!
     
-    var didInitialAnimation : Bool = false
+    private var didInitialAnimation : Bool = false
+    private var _parentalGateUnlocked : Bool = false
+    private var _gateController =  HTKParentalGateViewController()
+    private var _pendingApplicaitonToOpen : IQApplication?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,9 @@ class IntroViewController: UIViewController, IQApplicationListDelegate {
 
         containerMinHeightConstraint.constant =  min(containerMaxHeightConstraint.constant, 300 + (UIScreen.mainScreen().bounds.size.height - 480)/2)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "initiateViewChangeAnimation", userInfo: nil, repeats: false)
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleValidationStateChangedNotification:", name: "HTKParentalGateValidationStateChangedNotification", object: nil)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -77,8 +83,24 @@ class IntroViewController: UIViewController, IQApplicationListDelegate {
     
     func shouldOpenApp(app: IQApplication!) -> Bool {
         Heap.track("clickedOtherApp", withProperties: ["bundleId" : app.appBundleId])
-        return true
+        if !_parentalGateUnlocked {
+            _pendingApplicaitonToOpen = app
+            _gateController.showInParentViewController(self, fullScreen: false)
+            return false;
+        }
+        
+        return true;
     }
     
-    
+    func handleValidationStateChangedNotification(notification : NSNotification ) {
+        assert(NSThread.isMainThread())
+        let state = notification.userInfo!["HTKParentalGateValidationStateChangedKey"]! as! NSNumber
+        if state.integerValue  == Int(HTKParentalGateValidationState.IsValidated.rawValue) {
+            _parentalGateUnlocked = true
+            if let app = _pendingApplicaitonToOpen {
+                _pendingApplicaitonToOpen = nil
+                app.openInAppStore()
+            }
+        }
+    }
 }
